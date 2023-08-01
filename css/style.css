@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.main-conteiner {
+  padding: 20px;
+}
+
 .bb {
   border: 1px solid black;
   background-color: aquamarine;
@@ -18,4 +22,26 @@
 .cont-footer {
   background-color: #888;
   text-align: center;
+}
+
+.table-items {
+  border: 1px solid grey;
+}
+
+.el-title {
+  cursor: pointer;
+}
+
+.edit {
+  border: 1px solid grey;
+  background-color: aquamarine;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.delete {
+  border: 1px solid grey;
+  background-color: #f53d3d;
+  padding: 5px;
+  cursor: pointer;
 }

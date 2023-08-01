@@ -99,14 +99,31 @@ router.put("/api/books/:id", (req, res) => {
   }
 });
 
-router.delete("/api/books/:id", (req, res) => {
+// router.delete("/api/books/:id", (req, res) => {
+//   const { books } = store;
+//   const { id } = req.params;
+//   const idx = books.findIndex((el) => el.id === id);
+
+//   if (idx !== -1) {
+//     books.splice(idx, 1);
+//     res.json(true);
+//   } else {
+//     res.status(404);
+//     res.json({
+//       status: 404,
+//       errormsg: "404 | страница не найдена",
+//     });
+//   }
+// });
+
+router.post("/api/books/delete/:id", (req, res) => {
   const { books } = store;
   const { id } = req.params;
   const idx = books.findIndex((el) => el.id === id);
-
   if (idx !== -1) {
     books.splice(idx, 1);
-    res.json(true);
+    // res.json(true);
+    res.redirect("/");
   } else {
     res.status(404);
     res.json({
