@@ -4,11 +4,19 @@ const Book = require("../store/Book");
 const fileMulter = require("../middleware/file");
 
 const store = {
-  books: [new Book(), new Book()],
+  books: [new Book('1',"Название книги 1"), new Book('2',"Название книги 2")],
 };
 
 router.get("/", (req, res) => {
   res.render("index", {
+    title: "Main PAGE",
+    store: store.books,
+  });
+});
+
+router.get("/create", (req, res) => {
+  // console.log('CREATE!!!');
+  res.render("create", {
     title: "Main PAGE",
     store: store.books,
   });
@@ -41,7 +49,8 @@ router.get("/api/books/:id", (req, res) => {
   }
 });
 
-router.post("/api/books/", fileMulter.single("book-name"), (req, res) => {
+router.post("/api/books/", fileMulter.single("fileBook"), (req, res) => {
+  // console.log('ADD bok');
   const { books } = store;
   const {
     id,
@@ -67,7 +76,8 @@ router.post("/api/books/", fileMulter.single("book-name"), (req, res) => {
 
   books.push(newBook);
   res.status(201);
-  res.json(newBook);
+  res.redirect("/");
+  // res.json(newBook);
 });
 
 router.put("/api/books/:id", (req, res) => {
