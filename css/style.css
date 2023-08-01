@@ -1,0 +1,21 @@
+.cont-flex {
+  display: flex;
+}
+
+.bb {
+  border: 1px solid black;
+  background-color: aquamarine;
+}
+
+.header-menu {
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.cont-footer {
+  background-color: #888;
+  text-align: center;
+}

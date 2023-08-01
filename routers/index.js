@@ -7,6 +7,13 @@ const store = {
   books: [new Book(), new Book()],
 };
 
+router.get("/", (req, res) => {
+  res.render("index", {
+    title: "Main PAGE",
+    store: store.books,
+  });
+});
+
 router.get("/api/books", (req, res) => {
   const { books } = store;
   res.json(books);

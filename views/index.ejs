@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя библиотека</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="cont-flex">
+      <h4 class="header-menu bb">Главная</h4>
+      <h4 class="header-menu bb">Добавить книгу</h4>
+    </header>
+    <main>
+      <% store.map ((el, idx) => { %>
+      <h3><%=el.id%></h3>
+      <% }); %>
+    </main>
+    <footer class="cont-footer bb">copyright ozkostay</footer>
+  </body>
+</html>
