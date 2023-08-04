@@ -1,0 +1,7 @@
+<%- include('./port/layout-start', {title: title}) %>
+  <div class="view-fields">Название: <span class="bold"><%= item.title %></span></div>
+  <div class="view-fields">Описание: <%= item.description %></div>
+  <div class="view-fields">Автор: <%= item.authors %></div>
+  <div class="view-fields">favorite: <%= item.favorite %></div>
+  <div class="view-fields">Обложка: <%= item.fileCover %></div>
+<%- include('./port/layout-end') %>

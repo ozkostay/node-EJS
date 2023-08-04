@@ -5,8 +5,9 @@
   <table class="table-items">
     <tr>
       <td style="width: 20px"><%=idx + 1%>.</td>
-      <td style="width: 400px" class="el-title"><%=el.title%></td>
-      <td style="width: 40px"><button class="edit">Редактировать</button></td>
+      <td style="width: 400px" class="el-title"><a href="/view/<%=el.id%>"><%=el.title%></a></td>
+      <td style="width: 40px">
+        <a  class="edit" href="/update/<%=el.id%>">Редактировать</a></td>
       <td style="width: 40px">
         <form method="POST" action="api/books/delete/<%=el.id%>">
           <button class="delete">Удалить</button>
